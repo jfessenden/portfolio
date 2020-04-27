@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import SketchWrapper from './SketchWrapper'
+import backgroundSketch from './sketches/backgroundSketch'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Theme">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
+        Jane Fessenden
+        
       </header>
+      <div className="canvas-container">
+        <SketchWrapper sketch={backgroundSketch}/>
+      </div>
+
+      <div class="flex-container">
+        <div>projects</div>
+        <div>experiments</div>
+        <div>resume</div>
+        <div>contact</div>
+      </div>
+
     </div>
   );
 }
 
-export default App;
+export default App; 
